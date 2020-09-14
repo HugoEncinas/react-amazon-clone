@@ -4,11 +4,11 @@ import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
 
-const HeaderDisplay = ({basketNum}) => {
+const HeaderDisplay = ({basketNum, user, handleAuthentication}) => {
   return (
     <div className="header">
 
-      <Link to='/'>
+      <Link to="/">
         <img className="header__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"></img>
       </Link>
@@ -18,10 +18,15 @@ const HeaderDisplay = ({basketNum}) => {
       </div>
 
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
+        <Link to={!user && '/login'}>
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLineOne">
+              Hello {user ?
+              user.email : 'Guest'} </span>
+            <span className="header__optionLineTwo">{user ?
+              'Sign Out' : 'Sign In'}</span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>

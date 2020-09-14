@@ -19,7 +19,8 @@ const CheckoutContainer = (props) => {
   }, [basket]);
 
   return (
-    <CheckoutDisplay {...props} basketTotal={basketTotal} basketNum={basket?.length} ></CheckoutDisplay>
+    <CheckoutDisplay {...props} basketTotal={basketTotal}
+    ></CheckoutDisplay>
   )
 }
 
