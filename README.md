@@ -1,8 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Features
+Frontend with Home Page, Checkout Page, Login Page, Payment Page, and Orders Page  
+Functional login authentication, database and hosting with Firebase  
+Functional payment system using Stripe  
+For payment test use card number 4242 4242 4242 4242 (MM/YY: 04/24, CVC: 242, ZIP: 42424)  
+
+Test Credentials (or create your own account)  
+user: test@test.com  
+password: test123  
+
+## Live Site
+[https://clone-bec8f.web.app/](https://clone-bec8f.web.app/)
+
 ## Available Scripts
 
-In the project directory, you can run:
+**In the project directory, you can run:**
 
 ### `yarn start`
 
@@ -27,6 +40,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `firebase deploy --only hosting`
+
+After building the app, deploys the `build` folder to firebase hosting.<br />
+Open [https://clone-bec8f.web.app/](https://clone-bec8f.web.app/) to view the live site.
+
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -36,6 +54,17 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br />
+<br />
+
+**In the `functions` directory, you can run:**
+
+### `firebase emulators:start`
+To emulate the firebase backend<br />
+Open [http://localhost:4000](http://localhost:4000) to view the emulation suite in the browser.
+
+### `firebase deploy --only functions`
+To deploy only the firebase functions.
 
 ## Learn More
 

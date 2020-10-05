@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
+import { getBasketTotal } from "../../selectors";
 import { useStateValue } from '../../StateProvider';
 import CheckoutDisplay from './CheckoutDisplay';
 
 const CheckoutContainer = (props) => {
 
   const [{ basket }] = useStateValue();
-  const [ basketTotal, setBasketTotal ] = useState(0);
-
-  const getBasketTotal = (basketArray) => {
-    return basketArray.reduce((a,b) => {
-        return a + b.price;
-    }, 0);
-  }
-
-  useEffect(() => {
-    setBasketTotal(getBasketTotal(basket))
-  }, [basket]);
 
   return (
-    <CheckoutDisplay {...props} basketTotal={basketTotal}
+    <CheckoutDisplay {...props} basketTotal={getBasketTotal(basket)}
     ></CheckoutDisplay>
   )
 }
