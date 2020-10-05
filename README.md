@@ -1,3 +1,5 @@
+# Amazon Clone
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Features
@@ -12,6 +14,8 @@ password: test123
 
 ## Live Site
 [https://clone-bec8f.web.app/](https://clone-bec8f.web.app/)
+
+![Drag Racing](src/assets/Site.png)
 
 ## Available Scripts
 
